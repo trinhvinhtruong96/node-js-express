@@ -2,8 +2,8 @@ const express = require('express');
 
 const app = express();
 
-app.get('/', (req, res) => {
-    res.status(200).send('Hello from the server side!');
+app.get('/api/v1/tours', (req, res) => {
+    res.status(200).send('Hello from the server sides!');
 });
 
 const port = 3000;
