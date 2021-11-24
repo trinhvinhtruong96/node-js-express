@@ -14,44 +14,6 @@ mongoose.connect(DB, {
   console.log('DB connection successful!');
 });
 
-const tourSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: [true, 'A tour must have a name'],
-  },
-  rating: {
-    type: Number,
-    default: 4.5,
-    unique: true
-  },
-  price: {
-    type: Number,
-    required: [true, 'A tour must have a price']
-  },
-});
-
-const Tour = mongoose.model('Tour', tourSchema);
-
-const testTour = new Tour({
-  name: 'The Forest Hiker',
-  rating: 4.7,
-  price: 497,
-})
-
-testTour.save()
-  .then(doc => {
-    console.log("🚀 ~ file: server.js ~ line 43 ~ doc", doc)
-  })
-  .catch(err => {
-    console.log("🚀 ~ file: server.js ~ line 46 ~ err", err)
-  });
-
-// const tourSchema = new mongoose.Schema({
-//   name: String,
-//   rating: Number,
-//   price: Number,
-// });
-
 // mongoose.connect(process.env.DATABASE_LOCAL, {
 //   useNewUrlParser: true,
 //   useCreateIndex: true,
