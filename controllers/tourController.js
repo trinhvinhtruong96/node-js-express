@@ -80,3 +80,5 @@ exports.deleteTour = catchAsync(async (req, res, next) => {
   });
 
 });
+
+// this comment use to test merge on github, because usually i use git lab with with the company project. So i want to make sure that github work in the same way
